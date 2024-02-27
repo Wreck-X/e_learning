@@ -1,5 +1,7 @@
 import 'package:e_learning_frontend/routes/route_names.dart';
+import 'package:e_learning_frontend/widgets/el_auth_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SignInView extends StatelessWidget {
   SignInView({super.key});
@@ -10,7 +12,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
           child: Column(
@@ -31,9 +33,9 @@ class SignInView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 90,
+                height: 40,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -49,13 +51,18 @@ class SignInView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 336,
                     height: 60,
                     child: TextFormField(
                       controller: _userNameController,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
@@ -70,6 +77,70 @@ class SignInView extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              const SizedBox(
+                width: double.infinity,
+                height: 32,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 336,
+                    height: 60,
+                    child: TextFormField(
+                      controller: _passwordController,
+                      decoration: const InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                          ),
+                        ),
+                        hintText: 'Password',
+                        hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: double.infinity,
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteNames.signUp);
+                    },
+                    child: const Text(
+                      'Don’t have an account, Sign Up',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(
+                width: double.infinity,
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [AuthButton(text: 'Login', onPressed: () {})],
               ),
             ],
           ),
