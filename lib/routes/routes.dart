@@ -8,7 +8,7 @@ class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.pageView:
-        return MaterialPageRoute(builder: (_) => MainPageView());
+        return MaterialPageRoute(builder: (_) => const MainPageView());
       case RouteNames.signIn:
         return MaterialPageRoute(builder: (_) => SignInView());
       case RouteNames.signUp:

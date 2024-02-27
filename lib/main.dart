@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
           child: Text('Hello World!'),
         ),
       ),
-      initialRoute: RouteNames.signIn,
+      initialRoute: RouteNames.signUp,
       onGenerateRoute: Routes.generateRoute,
     );
   }

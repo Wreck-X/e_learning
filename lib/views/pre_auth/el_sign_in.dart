@@ -1,12 +1,11 @@
 import 'package:e_learning_frontend/routes/route_names.dart';
 import 'package:e_learning_frontend/widgets/el_auth_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SignInView extends StatelessWidget {
   SignInView({super.key});
 
-  final TextEditingController _userNameController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   @override
@@ -33,7 +32,7 @@ class SignInView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 40,
+                height: 20,
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +45,7 @@ class SignInView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 80,
+                height: 60,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +54,7 @@ class SignInView extends StatelessWidget {
                     width: 336,
                     height: 60,
                     child: TextFormField(
-                      controller: _userNameController,
+                      controller: _usernameController,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -80,7 +79,7 @@ class SignInView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 32,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -114,7 +113,7 @@ class SignInView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 50,
+                height: 60,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -136,7 +135,7 @@ class SignInView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 50,
+                height: 60,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
