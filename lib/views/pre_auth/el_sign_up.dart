@@ -24,39 +24,31 @@ class SignUpView extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+              Container(
+                child: Column(children: [
                   Image.asset(
                     'assets/e_learning.png',
                     scale: 3,
-                  )
-                ],
-              ),
-              const SizedBox(
-                width: double.infinity,
-                height: 10,
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
+                  ),
+                  const SizedBox(
+                    width: double.infinity,
+                    height: 10,
+                  ),
+                  const Text(
                     'Sign Up',
                     style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   )
-                ],
+                ]),
               ),
               const SizedBox(
                 width: double.infinity,
                 height: 40,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 336,
-                    height: 60,
-                    child: TextFormField(
+              Container(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: Column(
+                  children: [
+                    TextFormField(
                       controller: _emailController,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -77,20 +69,11 @@ class SignUpView extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                width: double.infinity,
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 336,
-                    height: 60,
-                    child: TextFormField(
+                    const SizedBox(
+                      width: double.infinity,
+                      height: 30,
+                    ),
+                    TextFormField(
                       controller: _usernameController,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -111,20 +94,11 @@ class SignUpView extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                width: double.infinity,
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 336,
-                    height: 60,
-                    child: TextFormField(
+                    const SizedBox(
+                      width: double.infinity,
+                      height: 30,
+                    ),
+                    TextFormField(
                       controller: _passwordController,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -145,20 +119,11 @@ class SignUpView extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                width: double.infinity,
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 336,
-                    height: 60,
-                    child: TextFormField(
+                    const SizedBox(
+                      width: double.infinity,
+                      height: 30,
+                    ),
+                    TextFormField(
                       controller: _confirmPasswordController,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -179,15 +144,14 @@ class SignUpView extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(
                 width: double.infinity,
                 height: 40,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Column(
                 children: [
                   InkWell(
                     onTap: () {
@@ -201,16 +165,13 @@ class SignUpView extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                  )
+                  ),
+                  const SizedBox(
+                    width: double.infinity,
+                    height: 40,
+                  ),
+                  AuthButton(text: 'Sign Up', onPressed: () {})
                 ],
-              ),
-              const SizedBox(
-                width: double.infinity,
-                height: 40,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [AuthButton(text: 'Sign Up', onPressed: () {})],
               ),
             ],
           ),
