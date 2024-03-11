@@ -13,13 +13,13 @@ class AuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
-      height: 60,
+      width: double.infinity,
+      height: 84,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.black,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+          backgroundColor: const Color.fromARGB(255, 174, 0, 63),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero,
           ),
         ),
         onPressed: onPressed,

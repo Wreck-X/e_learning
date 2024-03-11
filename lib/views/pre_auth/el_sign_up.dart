@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class SignUpView extends StatelessWidget {
   SignUpView({super.key});
 
+  final TextEditingController _phoneNumberController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
@@ -22,41 +22,56 @@ class SignUpView extends StatelessWidget {
             children: [
               const SizedBox(
                 width: double.infinity,
-                height: 50,
+                height: 109,
               ),
-              Container(
-                child: Column(children: [
-                  Image.asset(
-                    'assets/e_learning.png',
-                    scale: 3,
-                  ),
-                  const SizedBox(
-                    width: double.infinity,
-                    height: 10,
-                  ),
-                  const Text(
+              const Column(children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 48),
+                  child: Text(
                     'Sign Up',
                     style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-                  )
-                ]),
-              ),
+                  ),
+                )
+              ]),
               const SizedBox(
                 width: double.infinity,
-                height: 40,
+                height: 77,
               ),
               Container(
-                padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                padding: const EdgeInsets.only(left: 34, right: 32),
                 child: Column(
                   children: [
                     TextFormField(
-                      controller: _emailController,
+                      controller: _phoneNumberController,
                       decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
+                        enabledBorder:
+                            UnderlineInputBorder(borderSide: BorderSide()),
+                        focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
                         ),
-                        focusedBorder: OutlineInputBorder(
+                        hintText: 'Phone',
+                        hintStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: double.infinity,
+                      height: 30,
+                    ),
+                    TextFormField(
+                      controller: _emailController,
+                      decoration: const InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
@@ -74,39 +89,14 @@ class SignUpView extends StatelessWidget {
                       height: 30,
                     ),
                     TextFormField(
-                      controller: _usernameController,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.black,
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.black,
-                          ),
-                        ),
-                        hintText: 'Username',
-                        hintStyle: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: double.infinity,
-                      height: 30,
-                    ),
-                    TextFormField(
                       controller: _passwordController,
                       decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
+                        enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
                         ),
-                        focusedBorder: OutlineInputBorder(
+                        focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
@@ -126,12 +116,12 @@ class SignUpView extends StatelessWidget {
                     TextFormField(
                       controller: _confirmPasswordController,
                       decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
+                        enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
                         ),
-                        focusedBorder: OutlineInputBorder(
+                        focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                             color: Colors.black,
                           ),
@@ -149,7 +139,7 @@ class SignUpView extends StatelessWidget {
               ),
               const SizedBox(
                 width: double.infinity,
-                height: 40,
+                height: 76,
               ),
               Column(
                 children: [
@@ -170,7 +160,7 @@ class SignUpView extends StatelessWidget {
                     width: double.infinity,
                     height: 40,
                   ),
-                  AuthButton(text: 'Sign Up', onPressed: () {})
+                  AuthButton(text: 'Sign Up', onPressed: () {}),
                 ],
               ),
             ],
